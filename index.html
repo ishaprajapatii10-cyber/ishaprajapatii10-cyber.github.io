@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isha Chitroda — Digital Marketing & Performance Marketing Specialist</title>
+<meta name="description" content="Isha Chitroda — Digital Marketing, Performance Marketing, SEO, Web & Mobile App Development specialist with 6+ years of experience and 50+ websites delivered across India, Australia, the UK and Nepal.">
+<meta property="og:title" content="Isha Chitroda — Digital Marketing & Performance Marketing Specialist">
+<meta property="og:description" content="6+ years turning strategy into growth across SEO, paid media, web & app development.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B6E4F'/%3E%3Cpath d='M20 65 L40 40 L55 55 L80 25' stroke='%23fff' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --ink:#14171A;
+  --ink-soft:#565F66;
+  --ink-faint:#8A9096;
+  --paper:#F5F5F0;
+  --paper-2:#EFEEE7;
+  --line:#E4E3DC;
+  --accent:#0B6E4F;
+  --accent-dark:#084F39;
+  --accent-soft:#E4F0EA;
+  --accent-tint:#F1F7F4;
+  --radius:18px;
+  --radius-sm:10px;
+  --maxw:1200px;
+  --ease:cubic-bezier(.16,.84,.44,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Fraunces',serif; font-weight:500; margin:0; letter-spacing:-0.01em;}
+p{margin:0; color:var(--ink-soft); line-height:1.65;}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 40px;}
+@media(max-width:720px){.wrap{padding:0 22px;}}
+section{position:relative;}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); display:flex; align-items:center; gap:10px; margin-bottom:18px; font-weight:500;
+}
+.eyebrow::before{content:''; width:22px; height:1px; background:var(--accent);}
+.btn{
+  display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:100px;
+  font-size:14px; font-weight:600; cursor:pointer; border:1px solid var(--ink); background:var(--ink); color:#fff;
+  transition:transform .5s var(--ease), background .3s, color .3s, border-color .3s;
+  position:relative; overflow:hidden; white-space:nowrap;
+}
+.btn:hover{transform:translateY(-3px);}
+.btn.ghost{background:transparent; color:var(--ink); border-color:var(--line);}
+.btn.ghost:hover{border-color:var(--ink);}
+.btn.accent{background:var(--accent); border-color:var(--accent);}
+.btn svg{width:15px; height:15px; transition:transform .4s var(--ease);}
+.btn:hover svg{transform:translate(3px,-3px);}
+
+/* ---------- Preloader ---------- */
+#preloader{
+  position:fixed; inset:0; background:#fff; z-index:9999;
+  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:14px;
+  transition:opacity .8s var(--ease), visibility .8s;
+}
+#preloader.hide{opacity:0; visibility:hidden; pointer-events:none;}
+.preload-mark{font-family:'Fraunces',serif; font-size:15px; letter-spacing:.05em; color:var(--ink);}
+.preload-bar{width:160px; height:2px; background:var(--paper-2); border-radius:2px; overflow:hidden;}
+.preload-bar span{display:block; height:100%; width:0%; background:var(--accent); transition:width .6s var(--ease);}
+
+/* ---------- Scroll progress ---------- */
+#progress{position:fixed; top:0; left:0; height:3px; background:var(--accent); z-index:1001; width:0%; transition:width .1s linear;}
+
+/* ---------- Nav ---------- */
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(255,255,255,.82); backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent; transition:border-color .4s, box-shadow .4s;
+}
+nav.scrolled{border-color:var(--line); box-shadow:0 6px 24px rgba(20,23,26,.04);}
+.nav-inner{max-width:var(--maxw); margin:0 auto; padding:18px 40px; display:flex; align-items:center; justify-content:space-between;}
+@media(max-width:720px){.nav-inner{padding:16px 22px;}}
+.logo{display:flex; flex-direction:column; line-height:1;}
+.logo b{font-family:'Fraunces',serif; font-size:19px; font-weight:600; letter-spacing:.01em;}
+.logo span{font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.13em; color:var(--accent); text-transform:uppercase; margin-top:4px;}
+.nav-links{display:flex; align-items:center; gap:34px;}
+.nav-links a{font-size:13.5px; font-weight:500; color:var(--ink-soft); position:relative; transition:color .3s;}
+.nav-links a::after{content:''; position:absolute; left:0; bottom:-5px; width:0; height:1px; background:var(--ink); transition:width .35s var(--ease);}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:flex; align-items:center; gap:16px;}
+.nav-cta .btn{padding:11px 20px; font-size:12.5px;}
+.burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
+.burger span{width:22px; height:1.6px; background:var(--ink); transition:.3s;}
+@media(max-width:920px){
+  .nav-links{display:none;}
+  .nav-cta .btn.ghost{display:none;}
+  .burger{display:flex;}
+}
+#mobileMenu{position:fixed; inset:0; background:#fff; z-index:999; display:flex; flex-direction:column; justify-content:center; padding:40px; gap:26px; transform:translateY(-100%); transition:transform .5s var(--ease); }
+#mobileMenu.open{transform:translateY(0);}
+#mobileMenu a{font-family:'Fraunces',serif; font-size:32px;}
+
+/* ---------- Hero ---------- */
+#hero{min-height:100vh; display:flex; align-items:center; padding:150px 0 70px; background:#fff; position:relative; overflow:hidden;}
+.hero-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:60px; align-items:end;}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr; gap:34px;}}
+.hero-head{font-size:clamp(38px,6.2vw,84px); line-height:1.02; font-weight:500;}
+.hero-head .word{display:inline-block; overflow:hidden; vertical-align:top;}
+.hero-head .word span{display:inline-block; transform:translateY(115%); transition:transform 1s var(--ease);}
+.hero-head.reveal .word span{transform:translateY(0);}
+.hero-head em{font-style:italic; color:var(--accent);}
+.hero-sub{margin-top:26px; max-width:480px; font-size:16.5px;}
+.hero-actions{display:flex; gap:16px; margin-top:38px; flex-wrap:wrap;}
+.hero-chart{width:100%; height:auto;}
+.hero-chart path.line{stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 2.4s var(--ease) .5s forwards;}
+@keyframes draw{to{stroke-dashoffset:0;}}
+.hero-stats{margin-top:70px; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); padding-top:28px; gap:20px;}
+@media(max-width:720px){.hero-stats{grid-template-columns:repeat(2,1fr);}}
+.stat-num{font-family:'Fraunces',serif; font-size:clamp(26px,3.4vw,42px); font-weight:600; display:flex; align-items:baseline; gap:2px;}
+.stat-label{font-size:12px; color:var(--ink-faint); margin-top:6px; letter-spacing:.02em;}
+
+/* ---------- Reveal ---------- */
+.reveal-up{opacity:0; transform:translateY(38px); transition:opacity .9s var(--ease), transform .9s var(--ease);}
+.reveal-up.in{opacity:1; transform:translateY(0);}
+.stagger > *{transition-delay:calc(var(--i,0) * 90ms);}
+
+/* ---------- Section shell ---------- */
+.section{padding:120px 0;}
+.section.tight{padding:90px 0;}
+.section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:30px; margin-bottom:56px; flex-wrap:wrap;}
+.section-title{font-size:clamp(30px,4vw,50px); max-width:640px;}
+.section-desc{max-width:340px; font-size:14.5px; padding-bottom:6px;}
+.divider{height:1px; background:var(--line);}
+.bg-paper{background:var(--paper);}
+
+/* ---------- About ---------- */
+#about .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start;}
+@media(max-width:860px){#about .about-grid{grid-template-columns:1fr; gap:40px;}}
+.about-lede{font-family:'Fraunces',serif; font-size:clamp(22px,2.4vw,30px); line-height:1.35; font-weight:400;}
+.about-lede em{font-style:italic; color:var(--accent);}
+.about-list{margin-top:32px; display:flex; flex-direction:column;}
+.about-list .row{display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:14px;}
+.about-list .row span:first-child{color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:.06em;}
+.about-card{background:var(--ink); color:#fff; border-radius:var(--radius); padding:38px; position:relative; overflow:hidden;}
+.about-card::before{content:''; position:absolute; top:-40%; right:-30%; width:70%; height:70%; background:radial-gradient(circle,var(--accent) 0%, transparent 70%); opacity:.35;}
+.about-card h3{color:#fff; font-size:22px; margin-bottom:20px; position:relative;}
+.about-card ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:14px; position:relative;}
+.about-card li{display:flex; gap:12px; font-size:14px; color:#D8DAD5; align-items:flex-start;}
+.about-card li svg{flex-shrink:0; margin-top:2px; width:15px; height:15px; color:var(--accent);}
+
+/* ---------- Expertise ---------- */
+.expertise-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+@media(max-width:920px){.expertise-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.expertise-grid{grid-template-columns:1fr;}}
+.exp-card{background:#fff; padding:34px 30px; transition:background .4s;}
+.exp-card:hover{background:var(--accent-tint);}
+.exp-num{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--accent); margin-bottom:20px;}
+.exp-card h4{font-size:19px; margin-bottom:14px;}
+.exp-tags{display:flex; flex-wrap:wrap; gap:7px; margin-top:16px;}
+.tag{font-size:11px; padding:5px 11px; border-radius:100px; background:var(--paper); color:var(--ink-soft); border:1px solid var(--line);}
+
+/* ---------- Filter chips ---------- */
+.filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:44px;}
+.chip{font-size:13px; font-weight:500; padding:10px 20px; border-radius:100px; border:1px solid var(--line); background:#fff; cursor:pointer; transition:.3s; color:var(--ink-soft);}
+.chip:hover{border-color:var(--ink);}
+.chip.active{background:var(--ink); color:#fff; border-color:var(--ink);}
+
+/* ---------- Work grid (screenshots) ---------- */
+.work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+@media(max-width:920px){.work-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.work-grid{grid-template-columns:1fr;}}
+.work-card{border-radius:var(--radius); overflow:hidden; background:#fff; border:1px solid var(--line); transition:transform .5s var(--ease), box-shadow .5s var(--ease); cursor:pointer;}
+.work-card:hover{transform:translateY(-6px); box-shadow:0 24px 48px rgba(20,23,26,.1);}
+.shot-wrap{aspect-ratio:16/13; overflow:hidden; background:var(--paper); position:relative;}
+.shot-wrap img{width:100%; height:100%; object-fit:cover; object-position:top; transition:transform .7s var(--ease);}
+.work-card:hover .shot-wrap img{transform:scale(1.06);}
+.shot-zoom{position:absolute; bottom:12px; right:12px; width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(.8); transition:.35s;}
+.work-card:hover .shot-zoom{opacity:1; transform:scale(1);}
+.shot-zoom svg{width:15px; height:15px;}
+.work-meta{padding:18px 20px 20px;}
+.work-meta .cat{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:8px; display:block;}
+.work-meta h5{font-size:15px; font-weight:600; margin-bottom:5px;}
+.work-meta p{font-size:12.5px;}
+
+/* ---------- Split ads intro ---------- */
+.ads-intro{display:grid; grid-template-columns:1fr 1.4fr; gap:50px; margin-bottom:50px; align-items:end;}
+@media(max-width:860px){.ads-intro{grid-template-columns:1fr;}}
+
+/* ---------- Social ---------- */
+.social-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media(max-width:820px){.social-grid{grid-template-columns:1fr;}}
+.social-card{border:1px solid var(--line); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; gap:16px; transition:.4s;}
+.social-card:hover{border-color:var(--ink); transform:translateY(-4px);}
+.social-icon{width:44px; height:44px; border-radius:12px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; color:var(--accent);}
+.social-card h5{font-size:17px;}
+.social-card a.handle{font-size:13px; color:var(--accent); font-weight:600; display:inline-flex; align-items:center; gap:6px;}
+
+/* ---------- Website portfolio ---------- */
+.site-toolbar{display:flex; gap:16px; margin-bottom:40px; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+.search-box{position:relative; flex:1; min-width:220px; max-width:340px;}
+.search-box input{width:100%; padding:13px 16px 13px 42px; border-radius:100px; border:1px solid var(--line); font-family:'Inter',sans-serif; font-size:13.5px; outline:none; transition:border-color .3s;}
+.search-box input:focus{border-color:var(--ink);}
+.search-box svg{position:absolute; left:16px; top:50%; transform:translateY(-50%); width:15px; height:15px; color:var(--ink-faint);}
+
+.featured-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-bottom:26px;}
+@media(max-width:920px){.featured-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.featured-grid{grid-template-columns:1fr;}}
+.feat-card{grid-column:span 1; border-radius:var(--radius); border:1px solid var(--line); overflow:hidden; background:#fff; transition:transform .5s var(--ease), box-shadow .5s var(--ease);}
+.feat-card:hover{transform:translateY(-6px); box-shadow:0 24px 48px rgba(20,23,26,.1);}
+.feat-card:first-child{grid-column:span 2;}
+@media(max-width:620px){.feat-card:first-child{grid-column:span 1;}}
+.preview{aspect-ratio:16/10; position:relative; background:linear-gradient(135deg,var(--paper) 0%, var(--paper-2) 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;}
+.feat-card:first-child .preview{aspect-ratio:16/8.4;}
+.preview .glyph{position:absolute; font-family:'Fraunces',serif; font-style:italic; font-size:120px; color:rgba(20,23,26,.05); user-select:none; white-space:nowrap;}
+.preview-inner{position:relative; text-align:center; z-index:2;}
+.preview-inner .ptag{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:14px;}
+.preview-visit{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--accent); border-bottom:1px solid var(--accent); padding-bottom:2px;}
+.site-body{padding:22px 24px 26px;}
+.site-body .row1{display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; gap:10px;}
+.site-body h5{font-size:17px;}
+.site-body .cat{font-size:10.5px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); background:var(--accent-soft); padding:4px 10px; border-radius:100px; white-space:nowrap;}
+.site-body .url{font-size:12.5px; color:var(--ink-faint); word-break:break-all;}
+.site-body .url:hover{color:var(--accent);}
+
+.all-sites{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+@media(max-width:920px){.all-sites{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.all-sites{grid-template-columns:1fr;}}
+.site-row{border:1px solid var(--line); border-radius:14px; padding:20px 20px; display:flex; flex-direction:column; gap:10px; transition:.35s; background:#fff;}
+.site-row:hover{border-color:var(--ink); transform:translateY(-3px);}
+.site-row .row1{display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+.site-row h6{font-family:'Fraunces',serif; font-size:16px; font-weight:500;}
+.site-row .url{font-size:12px; color:var(--ink-faint);}
+.site-row .cat{font-size:9.5px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; color:var(--accent); letter-spacing:.05em;}
+.site-row .visit{font-size:12.5px; font-weight:600; display:inline-flex; align-items:center; gap:6px; color:var(--ink); margin-top:4px;}
+.site-row .visit svg{width:12px; height:12px; transition:transform .35s var(--ease);}
+.site-row:hover .visit svg{transform:translate(2px,-2px);}
+.hidden{display:none !important;}
+.no-results{grid-column:1/-1; text-align:center; padding:50px 0; color:var(--ink-faint); font-size:14px;}
+
+/* ---------- Apps ---------- */
+.app-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:26px;}
+@media(max-width:1024px){.app-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.app-grid{grid-template-columns:1fr;}}
+.app-card{text-align:center;}
+.phone{width:100%; max-width:180px; margin:0 auto 22px; aspect-ratio:9/18.5; background:var(--ink); border-radius:26px; padding:8px; position:relative; box-shadow:0 20px 40px rgba(20,23,26,.16); transition:transform .5s var(--ease);}
+.app-card:hover .phone{transform:translateY(-6px) rotate(-1deg);}
+.phone-screen{width:100%; height:100%; border-radius:19px; background:linear-gradient(160deg,var(--accent-tint),var(--paper-2)); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; overflow:hidden; position:relative;}
+.phone-screen .notch{position:absolute; top:8px; left:50%; transform:translateX(-50%); width:46px; height:6px; border-radius:6px; background:rgba(20,23,26,.5);}
+.app-glyph{width:52px; height:52px; border-radius:16px; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:20px; font-weight:600;}
+.app-mono{font-family:'IBM Plex Mono',monospace; font-size:9px; color:var(--ink-faint); text-align:center; padding:0 14px;}
+.app-card h5{font-size:16px; margin-bottom:6px;}
+.app-card p.desc{font-size:12.5px; margin-bottom:14px;}
+.app-card a.store{font-size:12.5px; font-weight:600; color:var(--accent); display:inline-flex; align-items:center; gap:6px;}
+
+/* ---------- Brand projects ---------- */
+.brand-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+@media(max-width:760px){.brand-grid{grid-template-columns:1fr;}}
+.brand-card{border-radius:var(--radius); border:1px solid var(--line); padding:40px; background:var(--paper); transition:.4s;}
+.brand-card:hover{background:#fff; box-shadow:0 24px 48px rgba(20,23,26,.08);}
+.brand-tag{font-size:10.5px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:16px; display:block;}
+.brand-card h3{font-size:26px; margin-bottom:10px;}
+.brand-card .url{font-size:13.5px; color:var(--ink-soft); margin-bottom:22px; display:block;}
+
+/* ---------- Timeline ---------- */
+.timeline{position:relative; padding-left:36px;}
+.timeline::before{content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--line);}
+.tl-item{position:relative; padding-bottom:56px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{position:absolute; left:-36px; top:5px; width:11px; height:11px; border-radius:50%; background:#fff; border:2px solid var(--accent); transition:background .4s;}
+.tl-item.in .tl-dot{background:var(--accent);}
+.tl-date{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--accent); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px;}
+.tl-item h4{font-size:22px; margin-bottom:4px;}
+.tl-item .org{font-size:14px; color:var(--ink-faint); margin-bottom:14px; display:block;}
+.tl-item ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px;}
+.tl-item li{font-size:14px; color:var(--ink-soft); line-height:1.6;}
+
+/* ---------- Achievements strip ---------- */
+.ach-strip{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);}
+@media(max-width:760px){.ach-strip{grid-template-columns:repeat(2,1fr);}}
+.ach-cell{background:var(--ink); color:#fff; padding:42px 30px; text-align:center;}
+.ach-cell .num{font-family:'Fraunces',serif; font-size:clamp(30px,4vw,46px); font-weight:600;}
+.ach-cell .lab{font-size:11.5px; color:#B9BDB6; margin-top:8px; letter-spacing:.02em;}
+
+/* ---------- Contact ---------- */
+#contact{background:var(--ink); color:#fff; padding:140px 0; overflow:hidden; position:relative;}
+#contact::before{content:''; position:absolute; top:-20%; right:-10%; width:60%; height:80%; background:radial-gradient(circle, rgba(11,110,79,.4), transparent 70%);}
+.contact-inner{position:relative; text-align:center; max-width:760px; margin:0 auto;}
+.contact-inner h2{color:#fff; font-size:clamp(34px,6vw,68px); line-height:1.06;}
+.contact-inner h2 em{color:var(--accent); font-style:italic;}
+.contact-inner p{color:#B9BDB6; max-width:460px; margin:26px auto 0; font-size:15.5px;}
+.contact-actions{display:flex; gap:16px; justify-content:center; margin-top:44px; flex-wrap:wrap;}
+.contact-inner .btn.ghost{border-color:rgba(255,255,255,.25); color:#fff;}
+.contact-inner .btn.ghost:hover{border-color:#fff;}
+.contact-inner .btn.accent{color:#fff;}
+.contact-meta{margin-top:70px; display:flex; justify-content:center; gap:40px; flex-wrap:wrap; font-size:13px; color:#8C918A;}
+.contact-meta span{font-family:'IBM Plex Mono',monospace;}
+
+footer{padding:34px 0; border-top:1px solid rgba(255,255,255,.08); background:var(--ink);}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; color:#7D827B; font-size:12.5px;}
+.footer-inner a{color:#B9BDB6;}
+.footer-inner a:hover{color:#fff;}
+
+/* ---------- Lightbox ---------- */
+#lightbox{position:fixed; inset:0; background:rgba(10,12,13,.94); z-index:2000; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:opacity .4s var(--ease), visibility .4s;}
+#lightbox.open{opacity:1; visibility:visible;}
+#lightbox img{max-width:88vw; max-height:80vh; object-fit:contain; border-radius:6px; box-shadow:0 30px 80px rgba(0,0,0,.5); transform:scale(.94); transition:transform .4s var(--ease);}
+#lightbox.open img{transform:scale(1);}
+.lb-cap{position:absolute; bottom:36px; left:0; right:0; text-align:center; color:#B9BDB6; font-size:13px; font-family:'IBM Plex Mono',monospace;}
+.lb-btn{position:absolute; top:28px; right:32px; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; cursor:pointer; color:#fff; transition:.3s;}
+.lb-btn:hover{background:rgba(255,255,255,.18);}
+.lb-nav{position:absolute; top:50%; transform:translateY(-50%); width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; cursor:pointer; color:#fff; transition:.3s;}
+.lb-nav:hover{background:rgba(255,255,255,.18);}
+.lb-prev{left:22px;}
+.lb-next{right:22px;}
+@media(max-width:600px){.lb-nav{width:38px; height:38px;} .lb-prev{left:8px;} .lb-next{right:8px;}}
+
+::selection{background:var(--accent); color:#fff;}
+</style>
+</head>
+<body>
+
+<div id="preloader"><div class="preload-mark">ISHA CHITRODA</div><div class="preload-bar"><span id="preloadFill"></span></div></div>
+<div id="progress"></div>
+
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#hero" class="logo"><b>Isha Chitroda</b><span>Performance &amp; Growth</span></a>
+    <div class="nav-links">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Performance Work</a>
+      <a href="#websites">Websites</a>
+      <a href="#apps">Apps</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn ghost">Let's Talk</a>
+      <a href="assets/Isha_Resume.pdf" download class="btn">Download CV</a>
+      <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobileMenu">
+  <a href="#expertise">Expertise</a>
+  <a href="#work">Performance Work</a>
+  <a href="#websites">Websites</a>
+  <a href="#apps">Apps</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+  <a href="assets/Isha_Resume.pdf" download style="font-size:16px; font-family:'Inter',sans-serif; color:var(--accent); font-weight:600;">Download CV →</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <div class="wrap">
+    <div class="eyebrow reveal-up in">Digital Marketing · Performance Marketing · SEO · Web &amp; App Development</div>
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-head" id="heroHead">Digital Marketing That Turns Strategy Into <em>Growth.</em></h1>
+        <p class="hero-sub reveal-up" style="--i:2">Digital Marketing &amp; Performance Marketing Specialist with 6+ years of experience across SEO, paid advertising, social media, web development and data-driven digital growth.</p>
+        <div class="hero-actions reveal-up" style="--i:3">
+          <a href="#work" class="btn accent">Explore My Work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+          <a href="assets/Isha_Resume.pdf" download class="btn ghost">Download CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></a>
+        </div>
+      </div>
+      <div class="reveal-up" style="--i:2">
+        <svg class="hero-chart" viewBox="0 0 320 180" fill="none">
+          <line x1="0" y1="179" x2="320" y2="179" stroke="var(--line)"/>
+          <path class="line" d="M4 150 C 40 140, 55 100, 80 105 S 120 60, 150 65 S 190 20, 230 30 S 280 8, 316 6" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="316" cy="6" r="5" fill="var(--accent)"/>
+        </svg>
+        <p class="mono" style="font-size:11px; color:var(--ink-faint); margin-top:14px; text-align:right;">campaign performance trend — illustrative</p>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="reveal-up" style="--i:1"><div class="stat-num"><span class="counter" data-target="6" data-suffix="+">0</span></div><div class="stat-label">Years Experience</div></div>
+      <div class="reveal-up" style="--i:2"><div class="stat-num"><span class="counter" data-target="50" data-suffix="+">0</span></div><div class="stat-label">Websites Delivered</div></div>
+      <div class="reveal-up" style="--i:3"><div class="stat-num" style="font-size:clamp(20px,2.6vw,32px);">Multiple</div><div class="stat-label">Mobile Applications</div></div>
+      <div class="reveal-up" style="--i:4"><div class="stat-num" style="font-size:clamp(20px,2.6vw,32px);">International</div><div class="stat-label">Project Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="eyebrow reveal-up">About</div>
+    <div class="about-grid">
+      <div class="reveal-up">
+        <p class="about-lede">Highly motivated and results-oriented <em>Digital Marketing &amp; Performance Marketing Specialist</em> with over 6 years of experience driving international digital transformation, cross-channel paid media campaigns, and technical SEO strategies for clients across India, Australia, the UK and Nepal.</p>
+        <div class="about-list">
+          <div class="row"><span>Focus</span><span>Performance Marketing · SEO · Web &amp; App Development</span></div>
+          <div class="row"><span>Markets</span><span>India · Australia · UK · Nepal</span></div>
+          <div class="row"><span>Delivery</span><span>50+ Websites · Multiple Android Applications</span></div>
+          <div class="row"><span>Based in</span><span>Surat, Gujarat, India</span></div>
+        </div>
+      </div>
+      <div class="about-card reveal-up" style="--i:2">
+        <h3>What I bring to the table</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Cross-channel performance marketing on Google Ads &amp; Meta Ads Manager, from strategy to daily optimization</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Technical SEO, Search Console and GA4-driven decision making</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Full web builds on WordPress, PHP/Laravel and React.js</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Mobile app development &amp; publishing with Flutter and Android SDK</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>AI-driven marketing automation woven into everyday workflows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERTISE ================= -->
+<section id="expertise" class="section bg-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">Expertise, built for full-funnel digital growth.</h2>
+      <p class="section-desc reveal-up" style="--i:1">Seven disciplines, one connected strategy — from the first click to the finished build.</p>
+    </div>
+    <div class="expertise-grid reveal-up">
+      <div class="exp-card"><div class="exp-num">01</div><h4>Performance Marketing</h4><p>Cross-channel paid media planning and daily optimization for lead generation and ROAS.</p><div class="exp-tags"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">PPC</span><span class="tag">Paid Social</span><span class="tag">Lead Gen</span></div></div>
+      <div class="exp-card"><div class="exp-num">02</div><h4>SEO &amp; Analytics</h4><p>Technical audits, keyword strategy and measurement frameworks that hold up under scrutiny.</p><div class="exp-tags"><span class="tag">Technical SEO</span><span class="tag">SEM</span><span class="tag">GA4</span><span class="tag">Search Console</span><span class="tag">CRO</span></div></div>
+      <div class="exp-card"><div class="exp-num">03</div><h4>Digital Marketing</h4><p>Brand visibility and content programs that keep audiences engaged across channels.</p><div class="exp-tags"><span class="tag">Social Media Marketing</span><span class="tag">SMO</span><span class="tag">Email Marketing</span><span class="tag">Content Strategy</span></div></div>
+      <div class="exp-card"><div class="exp-num">04</div><h4>Web Development</h4><p>Fast, responsive builds engineered for both users and search engines.</p><div class="exp-tags"><span class="tag">WordPress</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">React.js</span></div></div>
+      <div class="exp-card"><div class="exp-num">05</div><h4>Mobile App Development</h4><p>Cross-platform apps built and published for real users on the Play Store.</p><div class="exp-tags"><span class="tag">Flutter</span><span class="tag">Android SDK</span></div></div>
+      <div class="exp-card"><div class="exp-num">06</div><h4>Data &amp; Programming</h4><p>The technical backbone that connects marketing decisions to real systems.</p><div class="exp-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">REST API</span></div></div>
+      <div class="exp-card"><div class="exp-num">07</div><h4>AI &amp; Marketing Automation</h4><p>AI-driven automation layered into campaigns, reporting and creative production.</p><div class="exp-tags"><span class="tag">AI-driven Automation</span><span class="tag">Canva</span><span class="tag">Photoshop</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERFORMANCE WORK (Meta / Google / SEO) ================= -->
+<section id="work" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">Performance work, straight from the dashboards.</h2>
+      <p class="section-desc reveal-up" style="--i:1">Real campaign and search-console screenshots — filter by channel to explore.</p>
+    </div>
+
+    <div class="filters reveal-up">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="meta">Meta Ads</button>
+      <button class="chip" data-filter="google">Google Ads</button>
+      <button class="chip" data-filter="seo">SEO &amp; Search Console</button>
+    </div>
+
+    <div class="work-grid" id="workGrid"></div>
+  </div>
+</section>
+
+<!-- ================= SOCIAL ================= -->
+<section id="social" class="section bg-paper tight">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">Social Media &amp; Content</h2>
+      <p class="section-desc reveal-up" style="--i:1">Brand accounts I manage content and social strategy for.</p>
+    </div>
+    <div class="social-grid">
+      <a class="social-card reveal-up" href="https://www.instagram.com/aartier.official" target="_blank" rel="noopener">
+        <div class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+        <h5>Aartier Official</h5>
+        <span class="handle">@aartier.official ↗</span>
+        <p style="font-size:13px;">Brand social presence tied to the <a href="https://aartier.com" target="_blank" rel="noopener" style="color:var(--accent); font-weight:600;">aartier.com</a> project.</p>
+      </a>
+      <a class="social-card reveal-up" style="--i:1" href="https://www.instagram.com/nilkanthdiam" target="_blank" rel="noopener">
+        <div class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+        <h5>Nilkanth Diamonds</h5>
+        <span class="handle">@nilkanthdiam ↗</span>
+        <p style="font-size:13px;">Social content for the <a href="https://nilkanthdiam.com" target="_blank" rel="noopener" style="color:var(--accent); font-weight:600;">nilkanthdiam.com</a> personal/brand project.</p>
+      </a>
+      <a class="social-card reveal-up" style="--i:2" href="https://www.instagram.com/prayoshaspices" target="_blank" rel="noopener">
+        <div class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+        <h5>Prayoshas Spices</h5>
+        <span class="handle">@prayoshaspices ↗</span>
+        <p style="font-size:13px;">Ongoing social media marketing and content management.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WEBSITE PORTFOLIO ================= -->
+<section id="websites" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">50+ websites delivered.</h2>
+      <p class="section-desc reveal-up" style="--i:1">A selection of live projects — every URL below is real and clickable.</p>
+    </div>
+
+    <div class="eyebrow reveal-up" style="margin-bottom:26px;">Featured</div>
+    <div class="featured-grid" id="featuredGrid"></div>
+
+    <div style="margin-top:80px;">
+      <div class="section-head" style="margin-bottom:30px;">
+        <h3 style="font-size:clamp(22px,2.6vw,30px); font-family:'Fraunces',serif;">Explore all websites</h3>
+      </div>
+      <div class="site-toolbar reveal-up">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input id="siteSearch" type="text" placeholder="Search websites…">
+        </div>
+        <div class="filters" id="siteFilters" style="margin-bottom:0;">
+          <button class="chip active" data-cat="all">All</button>
+          <button class="chip" data-cat="ecommerce">E-commerce &amp; Fashion</button>
+          <button class="chip" data-cat="business">Business &amp; Corporate</button>
+          <button class="chip" data-cat="wellness">Wellness</button>
+          <button class="chip" data-cat="realty">Realty &amp; Logistics</button>
+          <button class="chip" data-cat="engineering">Engineering &amp; Industrial</button>
+        </div>
+      </div>
+      <div class="all-sites" id="allSitesGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOBILE APPS ================= -->
+<section id="apps" class="section bg-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">Mobile Applications</h2>
+      <p class="section-desc reveal-up" style="--i:1">Cross-platform apps built with Flutter &amp; Android SDK, published on Google Play.</p>
+    </div>
+    <div class="app-grid" id="appGrid"></div>
+  </div>
+</section>
+
+<!-- ================= PERSONAL / BRAND ================= -->
+<section id="brand" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">Personal &amp; Brand Projects</h2>
+      <p class="section-desc reveal-up" style="--i:1">Independent brand and project work, outside of client / employment engagements.</p>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-card reveal-up">
+        <span class="brand-tag">Personal Brand</span>
+        <h3>Shrivaa</h3>
+        <a class="url" href="https://shrivaa.us" target="_blank" rel="noopener">shrivaa.us ↗</a>
+        <a class="btn ghost" href="https://shrivaa.us" target="_blank" rel="noopener">Visit Website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+      </div>
+      <div class="brand-card reveal-up" style="--i:1">
+        <span class="brand-tag">Brand Project</span>
+        <h3>Nilkanth Diamonds</h3>
+        <a class="url" href="https://nilkanthdiam.com" target="_blank" rel="noopener">nilkanthdiam.com ↗</a>
+        <a class="btn ghost" href="https://nilkanthdiam.com" target="_blank" rel="noopener">Visit Website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title reveal-up">Experience Timeline</h2>
+      <p class="section-desc reveal-up" style="--i:1">Six years, four roles, one throughline: performance-driven growth.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal-up">
+        <div class="tl-dot"></div>
+        <div class="tl-date">March 2024 — Present</div>
+        <h4>Freelance Digital Marketing &amp; Web Development Consultant</h4>
+        <span class="org">India &amp; International Markets</span>
+        <ul>
+          <li>Formulate and execute performance marketing strategies across Google Ads and Meta Ads for global clients in E-commerce, Healthcare, Logistics and Education.</li>
+          <li>Manage complete Shopify and WooCommerce stores — product listings, collections, pricing, promotions and conversion optimization.</li>
+          <li>Delivered 50+ custom websites and high-converting landing pages to improve lead generation and maximize ROI.</li>
+          <li>Optimize acquisition funnels through A/B testing, analytics and data-driven campaign improvements.</li>
+          <li>Publish cross-platform mobile applications using Flutter and Android SDK.</li>
+          <li>Monitor performance using GA4, Meta Pixel and conversion tracking to improve ROAS and reduce CAC.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal-up">
+        <div class="tl-dot"></div>
+        <div class="tl-date">February 2023 — March 2024</div>
+        <h4>Digital Marketing &amp; Website Development Manager</h4>
+        <span class="org">IIMT STUDY</span>
+        <ul>
+          <li>Designed and executed international digital marketing frameworks, expanding brand presence across global student/professional cohorts.</li>
+          <li>Spearheaded SEO workflows and high-intent PPC Google Ads campaigns to capture qualified international leads.</li>
+          <li>Analyzed competitor data and market trends to establish profitable cross-border institutional partnerships.</li>
+          <li>Oversaw global client communications and web maintenance, ensuring 100% on-time project delivery.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal-up">
+        <div class="tl-dot"></div>
+        <div class="tl-date">January 2021 — February 2023</div>
+        <h4>Website Development Manager</h4>
+        <span class="org">Dolphy India Private Limited — Australia Market Focus</span>
+        <ul>
+          <li>Managed the end-to-end website development lifecycle, coordinating directly with international stakeholders.</li>
+          <li>Led a cross-functional team of developers, designers and SEO specialists to deploy secure, ultra-responsive web properties.</li>
+          <li>Integrated AI-driven automation tools to streamline digital asset handling and optimize internal efficiency.</li>
+          <li>Drove technical website optimizations — page speed, site architecture and UX — to increase organic traffic retention.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal-up">
+        <div class="tl-dot"></div>
+        <div class="tl-date">January 2019 — January 2021</div>
+        <h4>Digital Marketing Executive</h4>
+        <span class="org">Surbhi Infotech Private Limited</span>
+        <ul>
+          <li>Built, monitored and scaled organic and paid multi-channel marketing campaigns across Google and Meta.</li>
+          <li>Conducted keyword research and site audits to structure long-term on-page and off-page SEO roadmaps.</li>
+          <li>Generated high-quality inbound leads and created engaging social media content.</li>
+          <li>Prepared monthly campaign performance reports isolating CTR, CPC and conversion value.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section class="section tight bg-paper">
+  <div class="wrap">
+    <div class="eyebrow reveal-up">Achievements</div>
+    <div class="ach-strip reveal-up">
+      <div class="ach-cell"><div class="num">6+</div><div class="lab">Years Experience</div></div>
+      <div class="ach-cell"><div class="num">50+</div><div class="lab">Websites Delivered</div></div>
+      <div class="ach-cell"><div class="num">Multiple</div><div class="lab">Mobile Applications</div></div>
+      <div class="ach-cell"><div class="num">4</div><div class="lab">Countries Served — India, Australia, UK, Nepal</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap contact-inner">
+    <div class="eyebrow reveal-up" style="justify-content:center; color:#B9BDB6;"><span style="color:var(--accent)">●</span> Available for select engagements</div>
+    <h2 class="reveal-up">Let's Create Something <em>That Performs.</em></h2>
+    <p class="reveal-up" style="--i:1">Digital marketing, SEO, and web &amp; app development — end to end, with the numbers to back it up.</p>
+    <div class="contact-actions reveal-up" style="--i:2">
+      <a href="mailto:ishiiiparmar@gmail.com" class="btn accent">Email Me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+      <a href="https://linkedin.com/in/isha-p7b77a541b" target="_blank" rel="noopener" class="btn ghost">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+      <a href="assets/Isha_Resume.pdf" download class="btn ghost">Download CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></a>
+    </div>
+    <div class="contact-meta reveal-up" style="--i:3">
+      <span>Surat, Gujarat, India</span>
+      <span>+91 70966 17369</span>
+      <span>ishiiiparmar@gmail.com</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Isha Chitroda. All rights reserved.</span>
+    <span>Built for performance, designed for growth.</span>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <div class="lb-btn" id="lbClose"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+  <div class="lb-nav lb-prev" id="lbPrev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></div>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-nav lb-next" id="lbNext"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Preloader ---------- */
+window.addEventListener('load', ()=>{
+  const fill = document.getElementById('preloadFill');
+  requestAnimationFrame(()=>{ fill.style.width = '100%'; });
+  setTimeout(()=>{
+    document.getElementById('preloader').classList.add('hide');
+    document.getElementById('heroHead').classList.add('reveal');
+  }, 650);
+});
+
+/* ---------- Hero headline word-stagger ---------- */
+(function(){
+  const el = document.getElementById('heroHead');
+  const words = el.textContent.trim().split(' ');
+  el.innerHTML = words.map((w,i)=>`<span class="word" style="transition-delay:${i*55}ms"><span>${w}&nbsp;</span></span>`).join('');
+})();
+
+/* ---------- Nav scroll state + progress ---------- */
+const nav = document.getElementById('mainNav');
+const progress = document.getElementById('progress');
+window.addEventListener('scroll', ()=>{
+  nav.classList.toggle('scrolled', window.scrollY > 30);
+  const h = document.documentElement;
+  const pct = (h.scrollTop || document.body.scrollTop) / ((h.scrollHeight || document.body.scrollHeight) - h.clientHeight) * 100;
+  progress.style.width = pct + '%';
+}, {passive:true});
+
+/* ---------- Mobile menu ---------- */
+const burger = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
+
+/* ---------- Scroll reveal ---------- */
+const revealEls = document.querySelectorAll('.reveal-up');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.14});
+revealEls.forEach(el=> io.observe(el));
+
+/* timeline dot activation */
+const tlItems = document.querySelectorAll('.tl-item');
+const io2 = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+}, {threshold:.4});
+tlItems.forEach(el=> io2.observe(el));
+
+/* ---------- Counters ---------- */
+const counters = document.querySelectorAll('.counter');
+const io3 = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target; const target = +el.dataset.target; const suf = el.dataset.suffix || '';
+      let cur = 0; const step = Math.max(1, Math.round(target/40));
+      const t = setInterval(()=>{
+        cur += step;
+        if(cur >= target){ cur = target; clearInterval(t); }
+        el.textContent = cur + suf;
+      }, 30);
+      io3.unobserve(el);
+    }
+  });
+}, {threshold:.6});
+counters.forEach(el=> io3.observe(el));
+
+/* ================= DATA ================= */
+const shots = {
+  meta: [
+    {src:'assets/1.jpg', title:'Post & App Campaign Performance', desc:'Link clicks and messaging conversation costs by creative.'},
+    {src:'assets/2.jpg', title:'Lead Campaigns Dashboard', desc:'Messaging conversations & cost per result across active ad sets.'},
+    {src:'assets/3.jpg', title:'Campaign Iteration Tracking', desc:'A/B campaign copies compared by spend and cost per conversation.'},
+    {src:'assets/4.jpg', title:'Multi-Campaign Overview', desc:'Cost-per-conversation tracking across parallel lead campaigns.'},
+    {src:'assets/5.jpg', title:'Travel & Hospitality — Lead Campaigns', desc:'Flight, bus and hotel lead campaigns for a travel account (Coast to Coast).'},
+    {src:'assets/6.jpg', title:'Travel & Hospitality — Traffic & Leads', desc:'Landing page views and website lead campaigns for the same travel account.'},
+    {src:'assets/7.jpg', title:'Ad-Level Performance', desc:'Individual ad results, budget and messaging conversion cost.'},
+  ],
+  google: [
+    {src:'assets/10.jpg', title:'All Campaigns Overview', desc:'Clicks vs. conversions trend across the full account.'},
+    {src:'assets/11.jpg', title:'Campaign Performance Snapshot', desc:'Clicks, impressions, average CPC and total cost.'},
+    {src:'assets/15.jpg', title:'Google Ads Overview', desc:'Clicks, impressions and average CPC over a 30-day window.'},
+  ],
+  seo: [
+    {src:'assets/12.jpg', title:'Search Console — Organic Growth', desc:'Clicks and impressions climbing over a sustained 6-month period.'},
+    {src:'assets/13.jpg', title:'Search Console — CTR Growth', desc:'Rising click-through-rate alongside impression volume.'},
+    {src:'assets/14.jpg', title:'Search Console — Clicks & Impressions', desc:'Total clicks and impressions trend from organic search.'},
+    {src:'assets/16.jpg', title:'Search Console — 6-Month Comparison', desc:'Total clicks and impressions compared period over period.'},
+    {src:'assets/17.jpg', title:'Search Console — Query Performance', desc:'Daily click and impression trend across tracked queries.'},
+    {src:'assets/18.jpg', title:'Search Console — Long-Range Trend', desc:'6-month click and impression comparison with position tracking.'},
+    {src:'assets/19.jpg', title:'Search Console — Steady Query Volume', desc:'Click and impression trend across an extended tracking window.'},
+    {src:'assets/20.jpg', title:'Search Console — Impression Growth', desc:'Impressions scaling well ahead of clicks over the tracked period.'},
+  ]
+};
+
+const websites = [
+  {name:'Aartier', url:'https://aartier.com', cat:'ecommerce', featured:true},
+  {name:'Premkala', url:'https://premkala.in', cat:'ecommerce', featured:true},
+  {name:'Nari Trends', url:'https://naritrends.com', cat:'ecommerce', featured:true},
+  {name:'Collabritz', url:'https://collabritz.tech', cat:'business', featured:true},
+  {name:'Vodhai', url:'https://vodhai.com', cat:'business', featured:true},
+  {name:'Gayatri Roadways', url:'https://gayatriroadways.com/', cat:'realty'},
+  {name:'Altair GEC', url:'https://www.altair-gec.com/', cat:'engineering'},
+  {name:'Epic Global', url:'https://www.epicglobal.in/', cat:'business'},
+  {name:'Radiant 360', url:'https://radiant360.co/', cat:'business'},
+  {name:'Frontier Services', url:'https://frontierservices.in/', cat:'business'},
+  {name:'Kamar Sheet Pile', url:'https://www.kamarsheetpile.in/', cat:'engineering'},
+  {name:'Saberwal Realty Group', url:'https://saberwalrealtygroup.com/', cat:'realty'},
+  {name:'Treasure Shipping', url:'https://www.treasureshipping.in/', cat:'realty'},
+  {name:'CVSA & Associates', url:'https://cvsaandassociates.com/', cat:'business'},
+  {name:'Kava Global', url:'https://kavaglobal.in/', cat:'business'},
+  {name:'Fabulik Fashion', url:'https://fabulikfashion.com/', cat:'ecommerce'},
+  {name:'Aatmashanti Wellness', url:'https://aatmashantiwellness.com/', cat:'wellness'},
+  {name:'Hometex Nepal', url:'https://hometexnepal.com/', cat:'ecommerce'},
+  {name:'Xploil', url:'https://www.xploil.com/', cat:'business'},
+  {name:'Ohio Hospital', url:'https://www.ohiohospital.in/', cat:'wellness'},
+  {name:'Flystar Engineers', url:'https://flystarengineers.in/', cat:'engineering'},
+  {name:'Bliss Wellness Society', url:'https://www.blisswellnesssociety.com/', cat:'wellness'},
+  {name:'Omnamuh', url:'https://www.omnamuh.com/', cat:'business'},
+  {name:'India Light Expo', url:'https://indialightexpo.com/', cat:'business'},
+  {name:'Kiteseng', url:'https://kiteseng.com/', cat:'engineering'},
+  {name:'VP Facility', url:'https://www.vpfacility.com/', cat:'engineering'},
+];
+
+const apps = [
+  {name:'City Docs', tag:'Doctor App', desc:'Healthcare appointment & consultation platform.', url:'https://play.google.com/store/apps/details?id=com.citydocs', glyph:'CD'},
+  {name:'OrderX Mart', tag:'Quick-Commerce App', desc:'Blinkit-style rapid grocery delivery app.', url:'https://play.google.com/store/apps/details?id=com.orderx.mart', glyph:'OX'},
+  {name:'Super PDF', tag:'PDF Utility App', desc:'PDF tools for editing, converting and managing documents.', url:'https://play.google.com/store/apps/details?id=com.superpdf', glyph:'SP'},
+  {name:'Flixo', tag:'Instagram Mini App', desc:'A lightweight Instagram companion experience.', url:'https://play.google.com/store/apps/details?id=com.flixo', glyph:'FX'},
+  {name:'Muslim App', tag:'Lifestyle App', desc:'Daily companion app for prayer and lifestyle needs.', url:'https://play.google.com/store/apps/details?id=in.soutalhaq.app', glyph:'MA'},
+  {name:'Swachh Palika', tag:'Nagar Palika App', desc:'Civic services app for municipal (Nagar Palika) users.', url:'https://play.google.com/store/apps/details?id=com.swachhpalika.user', glyph:'SW'},
+  {name:'Nexzaar', tag:'Task Earning App', desc:'Task-based earning platform for everyday users.', url:'https://play.google.com/store/apps/details?id=com.nexzaar.app', glyph:'NX'},
+  {name:'Vyapar Calculator', tag:'Business Calculator App', desc:'Simple calculator utility for everyday business use.', url:'https://play.google.com/store/apps/details?id=com.vyaparcalc', glyph:'VC'},
+];
+
+/* ---------- Render Performance Work ---------- */
+const catLabel = {meta:'Meta Ads & Paid Social', google:'Google Ads & PPC', seo:'SEO & Organic Growth'};
+let allWork = [];
+Object.keys(shots).forEach(cat=>{
+  shots[cat].forEach(item=> allWork.push({...item, cat}));
+});
+
+function renderWork(filter){
+  const grid = document.getElementById('workGrid');
+  grid.innerHTML = '';
+  const list = filter==='all' ? allWork : allWork.filter(w=>w.cat===filter);
+  list.forEach((item, idx)=>{
+    const card = document.createElement('div');
+    card.className = 'work-card';
+    card.innerHTML = `
+      <div class="shot-wrap">
+        <img src="${item.src}" alt="${item.title}" loading="lazy">
+        <div class="shot-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+      <div class="work-meta">
+        <span class="cat">${catLabel[item.cat]}</span>
+        <h5>${item.title}</h5>
+        <p>${item.desc}</p>
+      </div>`;
+    card.addEventListener('click', ()=> openLightbox(list, idx));
+    grid.appendChild(card);
+  });
+}
+renderWork('all');
+
+document.querySelectorAll('#work .chip').forEach(chip=>{
+  chip.addEventListener('click', ()=>{
+    document.querySelectorAll('#work .chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    renderWork(chip.dataset.filter);
+  });
+});
+
+/* ---------- Lightbox logic ---------- */
+let lbList = [], lbIndex = 0;
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+function openLightbox(list, idx){
+  lbList = list; lbIndex = idx;
+  updateLightbox();
+  lightbox.classList.add('open');
+}
+function updateLightbox(){
+  const item = lbList[lbIndex];
+  lbImg.src = item.src; lbImg.alt = item.title;
+  lbCap.textContent = item.title;
+}
+document.getElementById('lbClose').addEventListener('click', ()=> lightbox.classList.remove('open'));
+document.getElementById('lbPrev').addEventListener('click', ()=>{ lbIndex = (lbIndex-1+lbList.length)%lbList.length; updateLightbox(); });
+document.getElementById('lbNext').addEventListener('click', ()=>{ lbIndex = (lbIndex+1)%lbList.length; updateLightbox(); });
+lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
+document.addEventListener('keydown', (e)=>{
+  if(!lightbox.classList.contains('open')) return;
+  if(e.key==='Escape') lightbox.classList.remove('open');
+  if(e.key==='ArrowLeft') document.getElementById('lbPrev').click();
+  if(e.key==='ArrowRight') document.getElementById('lbNext').click();
+});
+
+/* ---------- Render Websites ---------- */
+const catNames = {ecommerce:'E-commerce & Fashion', business:'Business & Corporate', wellness:'Wellness', realty:'Realty & Logistics', engineering:'Engineering & Industrial'};
+
+function siteCard(site, big){
+  return `<div class="feat-card">
+    <a href="${site.url}" target="_blank" rel="noopener" class="preview">
+      <span class="glyph">${site.name.charAt(0)}</span>
+      <div class="preview-inner">
+        <div class="ptag">Website Preview</div>
+        <span class="preview-visit">Visit Website →</span>
+      </div>
+    </a>
+    <div class="site-body">
+      <div class="row1"><h5>${site.name}</h5><span class="cat">${catNames[site.cat]||'Business'}</span></div>
+      <a class="url" href="${site.url}" target="_blank" rel="noopener">${site.url.replace(/^https?:\/\//,'')}</a>
+    </div>
+  </div>`;
+}
+document.getElementById('featuredGrid').innerHTML = websites.filter(s=>s.featured).map(siteCard).join('');
+
+function renderAllSites(cat, query){
+  const grid = document.getElementById('allSitesGrid');
+  const q = (query||'').toLowerCase();
+  const list = websites.filter(s=> (cat==='all' || s.cat===cat) && s.name.toLowerCase().includes(q));
+  if(list.length===0){ grid.innerHTML = '<div class="no-results">No websites match your search.</div>'; return; }
+  grid.innerHTML = list.map(s=>`
+    <div class="site-row">
+      <div class="row1"><h6>${s.name}</h6><span class="cat">${catNames[s.cat]||'Business'}</span></div>
+      <a class="url" href="${s.url}" target="_blank" rel="noopener">${s.url.replace(/^https?:\/\//,'')}</a>
+      <a class="visit" href="${s.url}" target="_blank" rel="noopener">Visit Website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+    </div>`).join('');
+}
+renderAllSites('all','');
+
+let curCat = 'all';
+document.getElementById('siteFilters').addEventListener('click', (e)=>{
+  const chip = e.target.closest('.chip'); if(!chip) return;
+  document.querySelectorAll('#siteFilters .chip').forEach(c=>c.classList.remove('active'));
+  chip.classList.add('active');
+  curCat = chip.dataset.cat;
+  renderAllSites(curCat, document.getElementById('siteSearch').value);
+});
+document.getElementById('siteSearch').addEventListener('input', (e)=> renderAllSites(curCat, e.target.value));
+
+/* ---------- Render Apps ---------- */
+document.getElementById('appGrid').innerHTML = apps.map(a=>`
+  <div class="app-card reveal-up">
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="notch"></div>
+        <div class="app-glyph">${a.glyph}</div>
+        <div class="app-mono">${a.tag}</div>
+      </div>
+    </div>
+    <h5>${a.name}</h5>
+    <p class="desc">${a.desc}</p>
+    <a class="store" href="${a.url}" target="_blank" rel="noopener">View on Google Play ↗</a>
+  </div>
+`).join('');
+document.querySelectorAll('#appGrid .reveal-up').forEach(el=> io.observe(el));
+</script>
+</body>
+</html>
